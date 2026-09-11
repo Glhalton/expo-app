@@ -1,8 +1,7 @@
+import { AnimatedSplashOverlay } from "@/components/animated-icon";
 import { DarkTheme, DefaultTheme, Stack, ThemeProvider } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useColorScheme } from "react-native";
-
-import { AnimatedSplashOverlay } from "@/components/animated-icon";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -20,7 +19,10 @@ export default function Layout() {
           name="index"
           options={{ headerShown: true, title: "Home" }}
         />
-        <Stack.Screen name="information" options={{ headerShown: true }} />
+        <Stack.Screen
+          name="information"
+          options={{ headerShown: true, title: "Information" }}
+        />
       </Stack>
     </ThemeProvider>
   );
